@@ -9,7 +9,9 @@ public class Word {
     private String mMiwokTranslation;
 
     // image resource ID
-    private int mImageId;
+    private int mImageId = NO_IMAGE;
+
+    private static final int NO_IMAGE = -1;
 
 
     // constructor without picture
@@ -39,5 +41,8 @@ public class Word {
 
     public int getImageId() {
         return mImageId;
+    }
+    public boolean hasImage() {
+        return mImageId != NO_IMAGE;
     }
 }
