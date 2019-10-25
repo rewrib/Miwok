@@ -11,20 +11,24 @@ public class Word {
     // image resource ID
     private int mImageId = NO_IMAGE;
 
+    private int mAudioId;
+
     private static final int NO_IMAGE = -1;
 
 
     // constructor without picture
-    public Word(String defaultTranslation, String miwokTranslation) {
+    public Word(String defaultTranslation, String miwokTranslation, int audioId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
+        mAudioId = audioId;
     }
 
     // second constructor with image support
-    public Word(String defaultTranslation, String miwokTranslation, int imageId) {
+    public Word(String defaultTranslation, String miwokTranslation, int imageId, int audioId) {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageId = imageId;
+        mAudioId = audioId;
     }
 
     // getter methods
@@ -36,6 +40,10 @@ public class Word {
 
     public String getMiwokTranslation() {
         return mMiwokTranslation;
+    }
+
+    public int getAudioId() {
+        return mAudioId;
     }
 
 
